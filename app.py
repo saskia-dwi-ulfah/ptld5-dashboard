@@ -116,10 +116,10 @@ if 'vectorstore' in st.session_state:
                                     return_source_documents = True,
                                     verbose = False)
 
-            chain_result = qa_chain("Give me the summary in general!")
-            answer = chain_result["result"]
+        chain_result = qa_chain("Give me the summary in general!")
+        answer = chain_result["result"]
 
-            st.write(answer)
+        st.write(answer)
 
         # @st.cache_data
         # def cache_summarizer():
