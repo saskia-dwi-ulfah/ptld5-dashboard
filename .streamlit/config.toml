@@ -3,5 +3,5 @@ enableXsrfProtection = false
 enableCORS = false
 [theme]
 base="light"
-primaryColor="#C8A2C8"
-secondaryBackgroundColor="#301934"
+primaryColor="#52154E"
+secondaryBackgroundColor="#FFFFF"
