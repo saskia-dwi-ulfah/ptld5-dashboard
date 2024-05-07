@@ -10,6 +10,9 @@ def display_how_to():
     with model.container():
         st.text("▶️ Select Menu.")
         st.text("▶️ Insert your Open AI API key.")
-        st.text("▶️ Upload your PDF document that you want to ask.")
-        st.text("▶️ Ask the question and LLM will answer all of your questions.")
+        st.text("▶️ Upload your PDF document.")
+        st.text("▶️ Choose the menu.")
+        st.text("▶️ Summarizer: provide the general summary of the PDF document.")
+        st.text("▶️ Q&A: ask over the PDF file.")
+
 
