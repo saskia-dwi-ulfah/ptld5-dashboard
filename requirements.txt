@@ -1,4 +1,4 @@
-chroma==0.3.29
+chromadb==0.3.29
 streamlit==1.34.0
 streamlit-modal==0.1.2
 huggingface-hub==0.22.2
