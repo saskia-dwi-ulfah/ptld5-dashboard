@@ -36,6 +36,8 @@ def clear_all():
     for key in keys:
         del st.session_state[key]
 
+
+
 with st.sidebar:
     st.sidebar.title('PDF Q&A and Summarizer')
     st.button("How to Use The App", on_click = display_how_to)
@@ -108,9 +110,7 @@ if 'vectorstore' in st.session_state:
         st.title("Summarize The PDF 📑✍️")
         st.caption("Powered by Open AI GPT 3.5 Turbo")
 
-        @st.cache_data
-        def cache_summarizer():
-            qa_chain = RetrievalQA.from_chain_type(llm = llm,
+        qa_chain = RetrievalQA.from_chain_type(llm = llm,
                                     chain_type = "stuff",
                                     retriever = retriever,
                                     return_source_documents = True,
@@ -121,7 +121,20 @@ if 'vectorstore' in st.session_state:
 
             st.write(answer)
 
-        cache_summarizer()
+        # @st.cache_data
+        # def cache_summarizer():
+        #     qa_chain = RetrievalQA.from_chain_type(llm = llm,
+        #                             chain_type = "stuff",
+        #                             retriever = retriever,
+        #                             return_source_documents = True,
+        #                             verbose = False)
+
+        #     chain_result = qa_chain("Give me the summary in general!")
+        #     answer = chain_result["result"]
+
+        #     st.write(answer)
+
+        # cache_summarizer()
     
 
 
