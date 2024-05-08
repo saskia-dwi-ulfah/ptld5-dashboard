@@ -2,6 +2,6 @@
 enableXsrfProtection = false
 enableCORS = false
 [theme]
-base="light"
-primaryColor="#52154E"
-secondaryBackgroundColor="#FFFFF"
+base="dark"
+primaryColor="#C8A2C8"
+secondaryBackgroundColor="#301934"
