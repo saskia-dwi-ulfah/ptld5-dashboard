@@ -67,10 +67,10 @@ if 'vectorstore' in st.session_state:
     # display content based on the selected option
     if st.session_state.option == 'QnA':
         st.title("Ask The PDF 📑🔮🤔")
-        st.caption("Powered by Open AI GPT 3.5 Turbo")
+        st.caption("Powered by Open AI GPT 4")
 
         retriever = st.session_state.vectorstore.as_retriever()
-        llm = ChatOpenAI(model_name = 'gpt-3.5-turbo-0125', temperature = 0, openai_api_key = api_key)
+        llm = ChatOpenAI(model_name = 'gpt-4', temperature = 0, openai_api_key = api_key)
         custom_rag_prompt = PromptTemplate.from_template(template)
         rag_chain = (
             {"context": retriever | format_docs, "question": RunnablePassthrough()}
@@ -105,10 +105,10 @@ if 'vectorstore' in st.session_state:
 
     elif st.session_state.option == 'Summarizer':
         retriever = st.session_state.vectorstore.as_retriever()
-        llm = ChatOpenAI(model_name = 'gpt-3.5-turbo-0125', temperature = 0, openai_api_key = api_key)
+        llm = ChatOpenAI(model_name = 'gpt-4', temperature = 0, openai_api_key = api_key)
 
         st.title("Summarize The PDF 📑✍️")
-        st.caption("Powered by Open AI GPT 3.5 Turbo")
+        st.caption("Powered by Open AI GPT 4")
 
         qa_chain = RetrievalQA.from_chain_type(llm = llm,
                                     chain_type = "stuff",
